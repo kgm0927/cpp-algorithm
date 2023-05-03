@@ -65,7 +65,7 @@ public:
 	const T* end()const { return data + n; }
 	
 
-	// 두 배열을 하나로 합치는 연산을 수행하는 +연산자 함수를 정의한다. 이 함수는 friend로 정의한다.
+	// 두 배열을 하나로 합치는 연산을 수행하는 +연산자 함수를 정의한다. 이 함수는 friend로 정의한다. // 깊은 복사
 	friend dynamic_array<T> operator+ (const dynamic_array<T>& arr1, dynamic_array<T>& arr2) {
 		dynamic_array<T> result(arr1.size() + arr2.size());
 		copy(arr1.begin(),arr1.end(),result.begin());
